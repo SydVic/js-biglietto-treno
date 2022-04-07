@@ -24,8 +24,10 @@ if ( userAge < 18 ) {
 }
 
 const finalPriceRounded = finalTicketPrice.toFixed(2);
+console.log(finalTicketPrice, typeof(finalTicketPrice));
+console.log(finalPriceRounded, typeof(finalPriceRounded));
 
 // stampa in HTML del prezzo finale
 const outputFinalPrice= `Il prezzo del tuo biglietto è: ${finalPriceRounded} \u20ac`;
-console.log(finalTicketPrice, typeof(finalTicketPrice));
+
 document.getElementById('final-price').innerHTML = outputFinalPrice;
