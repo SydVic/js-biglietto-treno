@@ -1,5 +1,6 @@
 // variabili del prezzo al km, eta per accedere allo sconto e % sconto per età
 const pricePerKm = 0.21;
+
 const firstDiscountAge = 18;
 const secondDiscountAge = 65;
 
@@ -28,7 +29,7 @@ let finalTicketPrice;
 
 if ( userAge < firstDiscountAge ) {
     finalTicketPrice = fullTicketPrice * firstDiscountMultiplier;
-} else if (userAge > secondDiscountAge) {
+} else if ( userAge > secondDiscountAge ) {
     finalTicketPrice = fullTicketPrice * secondDiscountMultiplier;
 } else {
     finalTicketPrice = fullTicketPrice;
@@ -39,6 +40,6 @@ console.log(finalTicketPrice, typeof(finalTicketPrice));
 console.log(finalPriceRounded, typeof(finalPriceRounded));
 
 // stampa in HTML del prezzo finale
-const outputFinalPrice= `Il prezzo del tuo biglietto è: ${finalPriceRounded} \u20ac`;
+const outputFinalPrice = `Il prezzo del tuo biglietto è: ${finalPriceRounded} \u20ac`;
 
 document.getElementById('final-price').innerHTML = outputFinalPrice;
